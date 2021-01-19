@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -30,6 +31,13 @@ p { width: 300px; height: 39px; margin: 0px auto 0; position: relative; font-siz
 /*p input { width: 65%; height: 100%; font-weight: 100; background-color: var(--input); border: 3px solid var(--body); outline: 0; font-size: 30px; font-family: 'Roboto', sans-serif;}*/
 #wbutton { display: none; background-color: var(--orange); height: 50%; width: 100%; height: 100px; color: var(--bg); font-weight: 100; font-size: 8vw; font-weight: 500; border-color: var(--bg); box-shadow: none; font-family: 'Roboto', sans-serif;}
 #wslug {color: var(--slug); background: white; width: 50%; font-family: "Roboto", sans-serif; font-weight: 300; font-size: /*6*/8vw; border-top: transparent; border-left: transparent; border-right: transparent; border-bottom: 2px dotted var(--theme);}
+  
+  #ownLink {
+    background-color: var(--blue);
+    border: 3px solid var(--blue);
+    font-size: 4vw;
+    color: white;
+  }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: var(--orange);
@@ -89,6 +97,19 @@ input {
   /* custom */
   caret-color: var(--theme);
 }
+  
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: red;
+}
 
 </style>
 <script>
@@ -122,6 +143,7 @@ input {
 <br>
 <button id="wbutton" onclick="wslug()">&nbsp;>&nbsp;</button>
 </h1>
+<a href='https://nathanpuls.medium.com/fwdng-com-get-started-bdcb6aecf8c6' id='ownLink'>Get your own link</a>
 
 </div>
 
