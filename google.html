@@ -1,0 +1,232 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>fwdng</title>
+    </head>
+<style>
+
+
+body {
+    background-color: rgb(189,195,199);
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/* https://fonts.google.com/specimen/Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+/* * { color: rgb(0, 0, 0); font: 30px; "Open Sans";} */
+h1 {color: var(--h1); font-size: /*6*/8vw; font-weight: 300; font-family: var(--font);}
+body { background-color: var(--bg); font-weight: 100; padding-top: 0px; font-size: 30px; font-family: 'Roboto', sans-serif;
+
+
+
+
+
+
+
+
+}
+p { width: 300px; height: 39px; margin: 0px auto 0; position: relative; font-size: 30px; font-family: 'Roboto', sans-serif;}
+/*p input { width: 65%; height: 100%; font-weight: 100; background-color: var(--input); border: 3px solid var(--body); outline: 0; font-size: 30px; font-family: 'Roboto', sans-serif;}*/
+#wbutton { display: none; background-color: var(--orange); height: 50%; width: 100%; height: 100px; color: var(--bg); font-weight: 100; font-size: 8vw; font-weight: 500; border-color: var(--bg); box-shadow: none; font-family: 'Roboto', sans-serif;}
+#wslug {color: var(--slug); background: white; width: 50%; font-family: "Roboto", sans-serif; font-weight: 300; font-size: /*6*/8vw; border-top: transparent; border-left: transparent; border-right: transparent; border-bottom: 2px dotted var(--theme);}
+  
+  #ownLink {
+    background-color: var(--blue);
+    border: 3px solid var(--blue);
+    font-size: 4vw;
+    color: white;
+    text-align: center;
+  }
+
+  #example {
+    background-color: var(--white);
+    border: 3px solid var(--white);
+    font-size: 4vw;
+    color: var(--theme);
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  #slogan {
+    color: var(--black);
+    margin-top: 30px;
+    font-size: 2vw;
+     width: 100%;
+     text-align: center;
+     align-items: center;
+     /*border: 3px solid var(--theme);*/
+    padding: 10px;
+     
+  }
+  
+   #helptext {
+    color: gray;
+    margin-top: 30px;
+    font-size: 4vw;
+     width: 100%;
+     text-align: center;
+     align-items: center;
+     /*border: 3px solid var(--theme);*/
+    padding: 10px;
+     
+  }
+  
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--orange);
+  opacity: 1; /* Firefox */
+}
+
+/* input:focus {
+    border: black;
+    background-color: transparent;
+    resize: none;
+    border-color: black;
+    outline: black;
+} */
+
+input:focus { 
+    outline: none !important;
+    border-color: var(--body);
+    box-shadow: 0 0 0px var(--body);
+}
+/* textarea:focus { 
+    outline: none !important;
+    border-color: var(--pink);
+    box-shadow: 0 0 10px var(--yellow);
+} */
+
+/* https://www.w3schools.com/css/css3_variables.asp */
+:root {
+  --bg: #ffffff;
+  --blue: #2BA8E2;
+  --theme: var(--blue);
+  --orange: #ff7b4f;
+  --h1: rgb(61, 61, 61);/*#000000;*/
+  --body: #000000;
+  --font: font-family: 'Roboto', sans-serif;
+  --yellow: #ebd619;
+  --pink: #e267c3;
+  --slug: var(--theme);
+ 
+  --slugsize: 
+  
+}
+
+/* https://stackoverflow.com/questions/29806273/removing-blue-border-in-form-submit-button */
+#wbutton:focus {
+      outline: none;
+}
+
+.centered {
+  /* position: fixed; */
+  top: 50%;
+  left: 50%;
+  /* margin-top: -50px;
+  margin-left: -100px; */
+}
+  
+
+ 
+
+input {
+  /* custom */
+  caret-color: var(--theme);
+}
+  
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: red;
+}
+
+</style>
+<script>
+    function wslug(){
+    const site = "https://www.google.com/search?q="
+    const slug = document.getElementById("wslug").value;
+    const url = site + slug;
+    window.location = url;
+    }
+    
+    // restrict space https://jsfiddle.net/taditdash/hDtA3/
+    function AvoidSpace(event) {
+    var k = event ? event.which : window.event.keyCode;
+    if (k == 32) return false;
+}
+   
+      
+</script>
+
+<body>
+  
+ 
+
+<!-- <center> -->
+    <!-- <b><h1>FWDNG/</h1></b> -->
+    <!-- https://stackoverflow.com/questions/11100041/how-do-you-automatically-set-text-box-to-uppercase -->
+
+<div class="centered">
+<!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+
+<h1>&nbsp;Google search<input id="wslug" name="wslug" value="" placeholder="" onkeypress="return AvoidSpace(event)" autocomplete="off" autofocus spellcheck="false" style="text-transform:lowercase">
+  
+ 
+  
+  
+
+  
+
+</div>
+
+<!-- </center> -->
+
+<!-- enter key submits form https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_trigger_button_enter -->
+<script>
+var input = document.getElementById("wslug");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("wbutton").click();
+  }
+});
+</script>
+
+<!--autofocus for iphone?-->
+<script>
+(function($, M) {
+    // media query for minimum of 1024 pixel device width (iPad is 960 CSS pixels)
+    if(M.mq('only all and (min-width: 961px)')) {
+        $(function jqueryAutofocus() {
+            // automatically focus the search field
+            $('#header-search [name="q"]').focus();
+        });
+    }
+})(window.jQuery, window.Modernizr);
+</script>
+
+<!--attempt to reset form - does not work
+<script>
+function resetAfter() {
+  document.getElementById("wslug").reset();
+}
+</script>
+-->
+
+<!-- old form doesn't work start -->
+<!-- <form>
+fwdng.com/ <br><input type="text" id="wslug" name="wslug" value="" autofocus placeholder="enter keyword">
+<input type="submit" style="display:none" />
+enter()
+</form>
+</body>
+</html> -->
