@@ -33,42 +33,75 @@ p { width: 300px; height: 39px; margin: 0px auto 0; position: relative; font-siz
 #wbutton { display: none; background-color: var(--orange); height: 50%; width: 100%; height: 100px; color: var(--bg); font-weight: 100; font-size: 8vw; font-weight: 500; border-color: var(--bg); box-shadow: none; font-family: 'Roboto', sans-serif;}
 #wslug {color: var(--theme); background: white; width: 50%; font-family: "Roboto", sans-serif; font-weight: 300; font-size: /*6*/4vw; border-top: transparent; border-left: transparent; border-right: transparent; border-bottom: 2px dotted var(--theme);}
   
+  
+  
   #ownLink {
     background-color: var(--blue);
     border: 3px solid var(--blue);
     font-size: 2vw;
     color: white;
-    text-align: center;
+    text-align: ;
+    display: inline-block;
   }
   
-  #contact {
-    background-color: var(--blue);
-    border: 3px solid var(--blue);
-    font-size: 2vw;
-    color: white;
-    text-align: center;
-  }
 
+  #facts {
+    background-color: ;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 80%;
+    font-size: 2vw;
+  }
+  
   #example {
     background-color: var(--white);
     border: 3px solid var(--white);
-    font-size: 4vw;
+    font-size: 2vw;
     color: var(--theme);
     text-align: center;
     font-weight: bold;
+    width: 0px;
   }
   
-  #slogan {
+  #example2 {
+    font-size: 2vw;
+  }
+  
+  #header {
+    position: fixed;
+    left: 0;
+    top: 0;
     color: var(--white);
     background-color: var(--theme);
     margin-top: 0px;
-    font-size: 2vw;
+    margin-bottom: 40px;
+    font-size: 3vw;
      width: 100%;
      text-align: center;
      align-items: center;
      /*border: 3px solid var(--theme);*/
-    padding: 20px;
-     
+    padding: 30px;  
+  }
+  
+  #footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    color: var(--white);
+    background-color: var(--theme);
+    margin-top: 0px;
+    font-size: 3vw;
+     width: 100%;
+     text-align: center;
+     align-items: center;
+     /*border: 3px solid var(--theme);*/
+    padding: 20px;  
+  }
+  
+  #nathan {
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--theme);
   }
   
    #helptext {
@@ -187,7 +220,16 @@ a:hover, a:active {
 
 <div class="centered">
 <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
-  <h3 id='slogan'>Handcrafted URL Forwarding</h3>
+  <h3 id='header'>Handcrafted URL Forwarding</h3>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  
 <h1>&nbsp;fwdng.com/<input id="wslug" name="wslug" value="" placeholder="type-name-then-hit-enter" onkeypress="return AvoidSpace(event)" autocomplete="off" autofocus spellcheck="false" style="text-transform:lowercase">
 
   <!--
@@ -199,45 +241,35 @@ a:hover, a:active {
 <button id="wbutton" onclick="wslug()">&nbsp;>&nbsp;</button>
 </h1>
   </center>
- 
-  
-   <center>
-  <h6>
+     
+     <br>
+  <center>
+  <div>
+  <span>
 <a href='https://nathanpuls.medium.com/fwdng-com-get-started-bdcb6aecf8c6' id='ownLink'>Learn more</a>
-  </h6>
-  </center>
+  </span>
   
-    <center>
-  <h6>
-<a href='https://nathanpuls.medium.com/fwdng-com-get-started-bdcb6aecf8c6' id='ownLink'>GET YOUR LINK</a>
-  </h6>
-  </center>
-  
+  <span>
+<a href='https://nathanpuls.medium.com/fwdng-com-get-started-bdcb6aecf8c6' id='ownLink'>Get your link</a>
+  </span>
+    
+      <span>
+<a href='https://wyr.es/hi' id='ownLink'>Send me a message</a>
+  </span>
  
-  
-  <center>
-    <br>
-    
-  
-  
-  <center>
-  <i>Example:</i>
-  <a href='https://fwdng.com/nathan' id='example'>fwdng.com/nathan</a>
-   
-<p>Urls are made from scratch</p><br><br>
-<p>100% Organic</p><br>
-<p>Grass fed, non gmo, sugar free</p><br>
-
-    
+  </div>
   </center>
-  <br>
   <center>
-
-  <h6>
-<a href='https://wyr.es/hi' id='contact'>Send me a message</a>
-  </h6>
+<br>
+<br>
+<br>
+<br>
+     <div>   
+   <p id='facts'>Made from scratch • 100% Organic • Grass fed • Non GMO • Sugar free</p>
+ </div>
+    
     </center>
-    <h3 id='slogan'>Made with ❤️ by <a href='http://fwdng.com/nathan'>Nathan Puls</a></h3>
+    <h3 id='footer'>Made with ❤️ by <a href='http://fwdng.com/nathan' id='nathan'>fwdng.com/nathan</a></h3>
 </div>
 
 <!-- </center> -->
