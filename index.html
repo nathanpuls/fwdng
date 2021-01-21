@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -16,8 +17,8 @@ body {
 /* https://fonts.google.com/specimen/Roboto */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 /* * { color: rgb(0, 0, 0); font: 30px; "Open Sans";} */
-h1 {color: var(--h1); font-size: /*6*/8vw; font-weight: 300; font-family: var(--font);}
-body { background-color: var(--bg); font-weight: 100; padding-top: 0px; font-size: 30px; font-family: 'Roboto', sans-serif;
+h1 {color: var(--h1); font-size: /*6*/6vw; font-weight: 300; font-family: var(--font);}
+body { background-color: var(--bg); font-weight: 100; padding-top: 0px; font-size: 2vw; font-family: 'Roboto', sans-serif;
 
 
 
@@ -30,12 +31,20 @@ body { background-color: var(--bg); font-weight: 100; padding-top: 0px; font-siz
 p { width: 300px; height: 39px; margin: 0px auto 0; position: relative; font-size: 30px; font-family: 'Roboto', sans-serif;}
 /*p input { width: 65%; height: 100%; font-weight: 100; background-color: var(--input); border: 3px solid var(--body); outline: 0; font-size: 30px; font-family: 'Roboto', sans-serif;}*/
 #wbutton { display: none; background-color: var(--orange); height: 50%; width: 100%; height: 100px; color: var(--bg); font-weight: 100; font-size: 8vw; font-weight: 500; border-color: var(--bg); box-shadow: none; font-family: 'Roboto', sans-serif;}
-#wslug {color: var(--slug); background: white; width: 50%; font-family: "Roboto", sans-serif; font-weight: 300; font-size: /*6*/8vw; border-top: transparent; border-left: transparent; border-right: transparent; border-bottom: 2px dotted var(--theme);}
+#wslug {color: var(--theme); background: white; width: 50%; font-family: "Roboto", sans-serif; font-weight: 300; font-size: /*6*/4vw; border-top: transparent; border-left: transparent; border-right: transparent; border-bottom: 2px dotted var(--theme);}
   
   #ownLink {
     background-color: var(--blue);
     border: 3px solid var(--blue);
-    font-size: 4vw;
+    font-size: 2vw;
+    color: white;
+    text-align: center;
+  }
+  
+  #contact {
+    background-color: var(--blue);
+    border: 3px solid var(--blue);
+    font-size: 2vw;
     color: white;
     text-align: center;
   }
@@ -50,14 +59,15 @@ p { width: 300px; height: 39px; margin: 0px auto 0; position: relative; font-siz
   }
   
   #slogan {
-    color: var(--black);
-    margin-top: 30px;
+    color: var(--white);
+    background-color: var(--theme);
+    margin-top: 0px;
     font-size: 2vw;
      width: 100%;
      text-align: center;
      align-items: center;
      /*border: 3px solid var(--theme);*/
-    padding: 10px;
+    padding: 20px;
      
   }
   
@@ -102,11 +112,12 @@ input:focus {
   --bg: #ffffff;
   --blue: #2BA8E2;
   --theme: var(--blue);
-  --orange: #ff7b4f;
+  --oldorange: #ff7b4f;
   --h1: rgb(61, 61, 61);/*#000000;*/
   --body: #000000;
   --font: font-family: 'Roboto', sans-serif;
   --yellow: #ebd619;
+  --white: white;
   --pink: #e267c3;
   --slug: var(--theme);
  
@@ -136,7 +147,7 @@ input {
 }
   
 a:link, a:visited {
-  background-color: #f44336;
+  background-color: var(--theme);
   color: white;
   padding: 14px 25px;
   text-align: center;
@@ -145,7 +156,7 @@ a:link, a:visited {
 }
 
 a:hover, a:active {
-  background-color: red;
+  background-color: gray;
 }
 
 </style>
@@ -176,35 +187,57 @@ a:hover, a:active {
 
 <div class="centered">
 <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+  <h3 id='slogan'>Handcrafted URL Forwarding</h3>
+<h1>&nbsp;fwdng.com/<input id="wslug" name="wslug" value="" placeholder="type-name-then-hit-enter" onkeypress="return AvoidSpace(event)" autocomplete="off" autofocus spellcheck="false" style="text-transform:lowercase">
 
-<h1>&nbsp;fwdng.com/<input id="wslug" name="wslug" value="" placeholder="" onkeypress="return AvoidSpace(event)" autocomplete="off" autofocus spellcheck="false" style="text-transform:lowercase">
-  
+  <!--
  <p id='helptext'>
    
  Type a name <b>above</b> then press <b>enter</b> 
-</p>
- 
+</p>-->
+ <center>
 <button id="wbutton" onclick="wslug()">&nbsp;>&nbsp;</button>
 </h1>
-  <center>
-  <i>Example:</i>
-  <a href='https://fwdng.com/nathan' id='example'>fwdng.com/nathan</a>
   </center>
-  <br>
-  <center>
-    
+ 
+  
+   <center>
   <h6>
-<a href='https://nathanpuls.medium.com/fwdng-com-get-started-bdcb6aecf8c6' id='ownLink'>Get your link now</a>
+<a href='https://nathanpuls.medium.com/fwdng-com-get-started-bdcb6aecf8c6' id='ownLink'>Learn more</a>
   </h6>
+  </center>
+  
+    <center>
+  <h6>
+<a href='https://nathanpuls.medium.com/fwdng-com-get-started-bdcb6aecf8c6' id='ownLink'>GET YOUR LINK</a>
+  </h6>
+  </center>
+  
+ 
+  
   <center>
     <br>
     
-    <h3 id='slogan'>Forward to any link</h3>
   
   
+  <center>
+  <i>Example:</i>
+  <a href='https://fwdng.com/nathan' id='example'>fwdng.com/nathan</a>
+   
+<p>Urls are made from scratch</p><br><br>
+<p>100% Organic</p><br>
+<p>Grass fed, non gmo, sugar free</p><br>
 
-  
+    
+  </center>
+  <br>
+  <center>
 
+  <h6>
+<a href='https://wyr.es/hi' id='contact'>Send me a message</a>
+  </h6>
+    </center>
+    <h3 id='slogan'>Made with ❤️ by <a href='http://fwdng.com/nathan'>Nathan Puls</a></h3>
 </div>
 
 <!-- </center> -->
