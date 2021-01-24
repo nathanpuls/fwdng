@@ -1,227 +1,64 @@
-
-
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>fwdng.com - Handcrafted URL Forwarding</title>
-    </head>
-<style>
+<html lang="en">
+<head>
 
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>fwdng.com - Handcrafted URL Forwarding</title>
+  <meta name="description" content="">
+  <meta name="author" content="Nathan Puls">
 
-body {
-    background-color: rgb(189,195,199);
-    font-family: 'Open Sans', sans-serif;
-}
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" type="text/css">
 
-/* https://fonts.google.com/specimen/Roboto */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-/* * { color: rgb(0, 0, 0); font: 30px; "Open Sans";} */
-h1 {color: var(--h1); font-size: /*6*/6vw; font-weight: 300; font-family: var(--font);}
-body { background-color: var(--bg); font-weight: 100; padding-top: 0px; font-size: 2vw; font-family: 'Roboto', sans-serif;
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
 
-
-
-
-
-
-
-
-}
-p { width: 300px; height: 39px; margin: 0px auto 0; position: relative; font-size: 30px; font-family: 'Roboto', sans-serif;}
-/*p input { width: 65%; height: 100%; font-weight: 100; background-color: var(--input); border: 3px solid var(--body); outline: 0; font-size: 30px; font-family: 'Roboto', sans-serif;}*/
-#wbutton { display: none; background-color: var(--orange); height: 50%; width: 100%; height: 100px; color: var(--bg); font-weight: 100; font-size: 8vw; font-weight: 500; border-color: var(--bg); box-shadow: none; font-family: 'Roboto', sans-serif;}
-#wslug {color: var(--theme); background: white; width: 50%; font-family: "Roboto", sans-serif; font-weight: 300; font-size: /*6*/4vw; border-top: transparent; border-left: transparent; border-right: transparent; border-bottom: 2px dotted var(--theme);}
-  
-  
-  
-  #ownLink {
-    background-color: var(--blue);
-    border: 3px solid var(--blue);
-    font-size: 3vw;
-    font-weight:bold;
-    color: white;
-    text-align: ;
-    display: inline-block;
-    padding: 10px;
+  <style>
+    :root {
+    --theme: var(--blue);
+    --blue: #2BA8E2;
   }
-  
 
-  #facts {
-    background-color: ;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 80%;
-    font-size: 2vw;
-  }
-  
-  #example {
-    background-color: var(--white);
-    border: 3px solid var(--white);
-    font-size: 2vw;
-    color: var(--theme);
-    text-align: center;
-    font-weight: bold;
-    width: 0px;
-  }
-  
-  #example2 {
-    font-size: 2vw;
-  }
-  
-  #header {
-    position: fixed;
-    left: 0;
-    top: 0;
-    color: var(--white);
-    background-color: var(--theme);
-    margin-top: 0px;
-    margin-bottom: 40px;
-    font-size: 3vw;
-     width: 100%;
-     text-align: center;
-     align-items: center;
-     /*border: 3px solid var(--theme);*/
-    padding: 30px;  
-  }
-  
-  #footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    color: var(--white);
-    background-color: var(--theme);
-    margin-top: 0px;
-    margin-bottom: 0px;
-    font-size: 3vw;
-     width: 100%;
-     text-align: center;
-     align-items: center;
-     /*border: 3px solid var(--theme);*/
-    padding: 15px;  
-  }
-  
-  #facts-footer {
-    position: fixed;
-    display: flex;
-    align-items: center;
-    left: 10%;
-    bottom: 40px;
-    background-color: white;
-    margin-top: 10px;
-    margin-bottom: 60px;
-    width: 100%;
-    font-size: 2.5vw;
-    text-align: center;
-     align-items: center;
-  }
-  
-  #handcrafted {
-    background-color: var(--theme);
-    color: white;
-    padding: 10px;
-  }
-  
-  #nathan {
-    margin: 0px;
-    padding: 0px;
-    background-color: var(--theme);
-  }
-  
-   #helptext {
-    color: gray;
-    margin-top: 30px;
-    font-size: 4vw;
-     width: 100%;
-     text-align: center;
-     align-items: center;
-     /*border: 3px solid var(--theme);*/
-    padding: 10px;
-     
-  }
-  
-  img {
-  width: 30%;
-  height: auto;
-}
-  
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: var(--orange);
-  opacity: 1; /* Firefox */
-}
-
-/* input:focus {
-    border: black;
-    background-color: transparent;
-    resize: none;
-    border-color: black;
-    outline: black;
-} */
-
-input:focus { 
+  input:focus, textarea {
     outline: none !important;
-    border-color: var(--body);
-    box-shadow: 0 0 0px var(--body);
 }
-/* textarea:focus { 
-    outline: none !important;
-    border-color: var(--pink);
-    box-shadow: 0 0 10px var(--yellow);
-} */
+    #wslug {color: var(--theme); background: white; width: 100%; font-family: "Roboto", sans-serif; font-weight: 300; font-size: /*6vw*/; border-top: transparent; border-left: transparent; border-right: transparent; border-bottom: 2px dotted var(--theme);}
+    #wbutton { display: none; }
 
-/* https://www.w3schools.com/css/css3_variables.asp */
-:root {
-  --bg: #ffffff;
-  --blue: #2BA8E2;
-  --theme: var(--blue);
-  --oldorange: #ff7b4f;
-  --h1: rgb(61, 61, 61);/*#000000;*/
-  --body: #000000;
-  --font: font-family: 'Roboto', sans-serif;
-  --yellow: #ebd619;
-  --white: white;
-  --pink: #e267c3;
-  --slug: var(--theme);
- 
-  --slugsize: 
+    
+
+  </style>
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="row">
+      <div class="one-half column" style="margin-top: 15%">        
+        <h1>fwdng.com/
+        <input id="wslug" name="wslug" value="" placeholder="" onkeypress="return AvoidSpace(event)" autocomplete="off" autofocus spellcheck="false" style="text-transform:lowercase"></h4>
+        <h5>Type a name then press enter</h5>
+       
+      </div>
+    </div>
+  </div>
+
   
-}
-
-/* https://stackoverflow.com/questions/29806273/removing-blue-border-in-form-submit-button */
-#wbutton:focus {
-      outline: none;
-}
-
-.centered {
-  /* position: fixed; */
-  top: 50%;
-  left: 50%;
-  /* margin-top: -50px;
-  margin-left: -100px; */
-}
-  
-
- 
-
-input {
-  /* custom */
-  caret-color: var(--theme);
-}
-  
-a:link, a:visited {
-  background-color: var(--theme);
-  color: white;
-  padding: 14px 25px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-}
-
-a:hover, a:active {
-  background-color: gray;
-}
-
-</style>
 <script>
     function wslug(){
     const site = "https://fwdng.com/"
@@ -235,61 +72,27 @@ a:hover, a:active {
     var k = event ? event.which : window.event.keyCode;
     if (k == 32) return false;
 }
-   
-      
 </script>
 
 <body>
   
- 
-
-<!-- <center> -->
-    <!-- <b><h1>FWDNG/</h1></b> -->
-    <!-- https://stackoverflow.com/questions/11100041/how-do-you-automatically-set-text-box-to-uppercase -->
-
 <div class="centered">
-<!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
-   
-  <div>
-  <img src='https://miro.medium.com/max/450/1*hSvk6HtYKgg8tbC0ZTy4aw.png' </img>
-  <h3 id='handcrafted'>Handcrafted URL Forwarding</h3>
-   <div>
-  
- 
-  
- 
- 
 
-  
- 
- 
-  
-<h1>&nbsp;fwdng.com/<input id="wslug" name="wslug" value="" placeholder="type-name-then-hit-enter" onkeypress="return AvoidSpace(event)" autocomplete="off" autofocus spellcheck="false" style="text-transform:lowercase">
 
-  <!--
- <p id='helptext'>
-   
- Type a name <b>above</b> then press <b>enter</b> 
-</p>-->
  <center>
 <button id="wbutton" onclick="wslug()">&nbsp;>&nbsp;</button>
 </h1>
   </center>
      
-     <br>
+    
   <center>
   <div>
-  <span>
-<a href='https://nathanpuls.medium.com/fwdng-com-get-started-bdcb6aecf8c6' id='ownLink'>Learn more</a>
-  </span>
+ 
   
-  <span>
-<a href='https://fwdng.com/link' id='ownLink'>Get your link</a>
-  </span>
-    
-      <span>
-<a href='https://wyr.es/hi' id='ownLink'>Send me a message</a>
-  </span>
+  <a class="button" href="https://nathanpuls.medium.com/fwdng-com-get-started-bdcb6aecf8c6">Learn more</a>
+  <a class="button" href="https://fwdng.com/link">Get your link</A>
+<a class="button" href="https://wyr.es/hi">Send a message</a>
+  
  
   </div>
   </center>
@@ -299,11 +102,14 @@ a:hover, a:active {
 <br>
 <br>
      <div>   
-  <center><div id='facts-footer'>Made from scratch • 100% Organic • Grass fed • Non GMO • Sugar free</div></center>
+  <center><h6>Handcrafted URL Forwarding • 100% Organic • Grass fed • Non GMO • Sugar free</h6></center>
  </div>
     
     </center>
-    <h3 id='footer'>Made with ❤️ by <a href='http://fwdng.com/nathan' id='nathan'>fwdng.com/nathan</a></h3>
+    
+    <center>
+      <h6>Made with ❤️ by <a href='http://fwdng.com/nathan'>Nathan Puls</a></h6>
+    </center>
 </div>
 
 <!-- </center> -->
@@ -332,19 +138,7 @@ input.addEventListener("keyup", function(event) {
 })(window.jQuery, window.Modernizr);
 </script>
 
-<!--attempt to reset form - does not work
-<script>
-function resetAfter() {
-  document.getElementById("wslug").reset();
-}
-</script>
--->
-
-<!-- old form doesn't work start -->
-<!-- <form>
-fwdng.com/ <br><input type="text" id="wslug" name="wslug" value="" autofocus placeholder="enter keyword">
-<input type="submit" style="display:none" />
-enter()
-</form>
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
-</html> -->
+</html>
