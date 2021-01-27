@@ -1,0 +1,237 @@
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Github Go Switch</title>
+  <meta name="description" content="">
+  <meta name="author" content="Nathan Puls">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://nathanpuls.github.io/fwdng/css/skeleton.css">
+
+  <link rel="stylesheet" href="https://nathanpuls.github.io/fwdng/css/normalize.css">
+  
+  
+<style>
+  :root {
+    --blue: #1EAEDB;
+  }
+  
+  #display-bg {
+    background-color: black;
+    font-size: 14px;
+    color: black;
+    padding: 0px;
+}
+
+ #display {
+    background-color: transparent;
+    font-size: 14px;
+    color: white;
+    padding: 10px;
+    margin: 0px;
+    text-align: center;
+}
+  
+  
+/*TOGGLE CSS*/
+  .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: var(--blue);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--blue);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+  
+  .slider::after {
+  position:relative;
+  right:-70px;
+
+  content: ""
+}
+/*END TOGGLE CSS*/
+  </style>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="ten-columns" style="margin-top: 15%">
+<h5>
+        <a href='http://fwdng.com/go'>
+  fwdng.com/go
+        </a>
+        </h5>    
+        
+ <label class="switch">
+  <input type="checkbox">
+  <div class="slider"></div>
+   
+</label>
+ 
+       
+ <div id="ghcom">
+<h1> 
+  Github.com ➡ <span style=color:var(--blue)>Github.io</span>
+</h1>
+<input class="two-thirds column" id="input" type="text" name="input" onfocus="this.value=''" value="" placeholder="" autofocus/>
+      <input type="submit" id='btnSubmit' value="Go" onclick="displayData();" />
+        </div>
+<div id="ghio" style="display:none;">
+
+ <h1> 
+ <span style=color:var(--blue)>Github.io</span> ➡ Github.com
+</h1>
+<input class="two-thirds column" id="input" type="text" name="input" onfocus="this.value=''" value="" placeholder="" autofocus/>
+      <input type="submit" id='btnSubmit' value="Go" onclick="displayData();"/>
+</div>  
+
+        
+</div>
+</div>
+
+       
+</div>
+    </div>
+  
+
+
+  <script src="js/scripts.js"></script>
+  <script>
+    var inputEnter = document.getElementById("input");
+        inputEnter.addEventListener("keyup", function(event) {
+          if (event.keyCode === 13) {
+           event.preventDefault();
+           document.getElementById("btnSubmit").click();
+          }
+        });
+
+function dblClear() {
+        document.getElementById('input').value = '';
+        removeDisplayData();
+    }
+
+function removeDisplayData() {
+          display.innerHTML = '';
+      }
+
+function copyUrl() {
+  var copyText = input2;
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+  alert("Copied the text: " + copyText.value);
+}
+
+function displayData() {
+    
+          var div_display = document.getElementById('display');
+        /* This is your input, but you shoud use another Id for your fields. */
+        
+        var textValue = document.getElementById('input').value;
+        
+
+        var path = textValue.split('/');
+        var user = path[3];
+        var repo = path[4];
+      var rest = path.slice(7);
+      //var rest2 = rest.replace(',','/');
+        
+      var http = 'https://'
+         var domain = '.github.io/'
+        var input2 = http + user + domain + repo + '/' + rest;
+        var input3 = input2.replaceAll(',','/');
+        window.location = input3;
+  
+  
+  
+  /*
+  
+  https://github.com/nathanpuls/wyres/blob/main/audioplayer.html
+  
+  https://nathanpuls.github.io/repo/file
+  
+  */
+        
+      
+        /* Change the inner HTML of your div. 
+        div_display.innerHTML = input3; */
+      } 
+    
+    // TOGGLE JS
+    document.addEventListener('DOMContentLoaded', function () {
+  var checkbox = document.querySelector('input[type="checkbox"]');
+
+  checkbox.addEventListener('change', function () {
+    if (checkbox.checked) {
+      // do this
+      divSwitch();
+    } else {
+      // do that
+      divSwitch();
+    }
+  });
+});
+    //TOGGLE JS 2
+    
+    
+    //DIV SWITCH JS
+    
+    function divSwitch() {
+   var ghcom = document.getElementById("ghcom"); 
+   var ghio = document.getElementById("ghio");
+
+   ghcom.style.display = (
+       ghcom.style.display == "none" ? "block" : "none"); 
+   ghio.style.display = (
+       ghio.style.display == "none" ? "block" : "none"); 
+}
+    
+    //DIV SWITCH JS 2
+
+      </script>
+</body>
+</html>
