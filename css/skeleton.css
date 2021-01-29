@@ -23,6 +23,7 @@
 - Utilities
 - Clearing
 - Media Queries
+- Added by Nathan Puls
 */
 
 
@@ -416,3 +417,10 @@ there.
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {}
+
+/* Added by Nathan Puls
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.center {
+  text-align:center;
+}
